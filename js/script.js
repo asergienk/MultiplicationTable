@@ -76,7 +76,7 @@ function checkValid() {
   if (isNaN(minCol) || isNaN(maxCol) || isNaN(minRow) || isNaN(maxRow)) {
     text = "Input is not valid. Please enter an integer value.";
   } else {
-    text = "Input is valid.";
+      text = "Input is valid.";
   }
   document.getElementById("error").innerHTML = text;
 

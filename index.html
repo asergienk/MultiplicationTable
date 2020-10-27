@@ -16,19 +16,19 @@
           <table>
             <tr>
               <td align="right">Minimum Column Value</td>
-              <td align="left"><input type="number" id="minCol" maxlength="4" size="4"/></td>
+              <td align="left"><input type="number" id="minCol" maxlength="4" size="4" required/></td>
             </tr>
             <tr>
               <td id="maCol" align="right">Maximum Column Value</td>
-              <td align="left"><input type="number" id="maxCol" maxlength="4" size="4"/></td>
+              <td align="left"><input type="number" id="maxCol" maxlength="4" size="4" required/></td>
             </tr>
             <tr>
               <td align="right">Minimum Row Value</td>
-              <td align="left"><input type="number" id="minRow" maxlength="4" size="4"/></td>
+              <td align="left"><input type="number" id="minRow" maxlength="4" size="4" required/></td>
             </tr>
             <tr>
               <td align="right">Maximum Row Value</td>
-              <td align="left"><input type="number" id="maxRow" maxlength="4" size="4"/></td>
+              <td align="left"><input type="number" id="maxRow" maxlength="4" size="4" required/></td>
             </tr>
             <tr>
               <td align="center"><input type="submit" value="Generate"/></td>
@@ -38,13 +38,12 @@
         </fieldset>
       </form>
 
+      <!--<p id="error"></p>-->
+
       <table id="multTable">
       </table>
 
-      <p id="error"></p>
-      <script>
 
-      </script>
 
   </body>
 </html>
