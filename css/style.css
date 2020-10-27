@@ -1,0 +1,60 @@
+
+html {
+    background-color: #9FA5FF;
+    height: 100%;
+}
+
+body {
+    background-color: #E2E3FF;
+    /*
+    margin: 0 auto;
+    max-width: 960px;
+    min-height: 100%;
+    min-width: 700px;
+    padding: 30px;
+    width: 50%;
+*/
+}
+
+#wrapper {
+	width: 80%;
+	margin: auto;
+	display: grid;
+	grid-template-columns: 400px 400px;
+  grid-template-rows: 400px;
+  grid-gap: 20px;
+	grid-template-areas: "input table";
+	margin-top: 25px;
+	min-width: 600px;
+  padding-top: 50px;
+}
+
+form {
+  grid-column: 1/2;
+  margin: auto;
+}
+
+
+#multTable {
+  grid-column: 2/3;
+  margin: auto;
+
+   overflow-x:scroll;
+   overflow-y:scroll;
+   width: 600px;
+   height: 300px;
+   display:block;
+}
+
+#multTable td, th {
+  width: 50px;
+  font-size: 20px;
+  border: 1px solid blue;
+}
+#multTable td:nth-child(even) {
+  background-color: #ffffff;
+}
+
+#multTable th {
+  background-color: #9FA5FF;
+}
