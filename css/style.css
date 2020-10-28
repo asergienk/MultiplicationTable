@@ -18,12 +18,12 @@ h2 {
     text-align: center;
     background-color: #c68de2;
 }
-/*
-p {
-  padding-left: 15px;
-  padding-bottom: 15px;
+
+h6 {
+  text-align: center;
+  margin-bottom: 0px;
 }
-*/
+
 .purple-background {
   background-color:#c68de2;
 }
@@ -38,19 +38,18 @@ p {
   padding-left: 0px;
   padding-right: 0px;
 }
+
 .container {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px 0;
+  overflow: scroll;
+  height: 300px;
 }
+
 #multTable {
   margin: auto;
-  height: 200px;
-  overflow-x:scroll;
-  overflow-y:scroll;
-  display:block;
-  width:70%;
 }
-#error p{
+
+#message p{
   color: red;
   margin-bottom: 0px;
   padding-top: 15px;

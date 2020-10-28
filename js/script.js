@@ -4,10 +4,10 @@ function generateTable() {
   var maxCol = parseInt(document.getElementById("maxCol").value);
   var minRow = parseInt(document.getElementById("minRow").value);
   var maxRow = parseInt(document.getElementById("maxRow").value);
-  var error = document.getElementById("error");
+  var error = document.getElementById("message");
   //if(var node = document.createTextNode();)
 
-  clearError();
+  clearMessage();
 
   //swapping values if min>max
   if(minCol>maxCol && minRow>maxRow)
@@ -21,7 +21,7 @@ function generateTable() {
     minRow = temp2;
 
     var node = document.createTextNode("Min and Max Column AND Row Values are swapped.");
-    printError(node);
+    printMessage(node);
   }
  else{
   if(minCol>maxCol)
@@ -30,11 +30,11 @@ function generateTable() {
     maxCol = minCol;
     minCol = temp;
     var node = document.createTextNode("Min and Max Column Values are swapped.");
-    printError(node);
+    printMessage(node);
     /*
     var newP = document.createElement("P");
     var node = document.createTextNode("Min and Max Column Values are swapped.");
-    clearError();
+    clearMessage();
     newP.appendChild(node);
     error.appendChild(newP);
     */
@@ -47,10 +47,10 @@ function generateTable() {
     maxRow = minRow;
     minRow = temp;
     var node = document.createTextNode("Min and Max Row Values are swapped.");
-    printError(node);
+    printMessage(node);
 
     /*
-    clearError();
+    clearMessage();
     var newP = document.createElement("P");
     var node = document.createTextNode("Min and Max Row Values are swapped.");
     newP.appendChild(node);
@@ -71,7 +71,7 @@ function generateTable() {
       {
         //starting a new row
         result += "<tr>";
-        result += "<th>" + " " + "</th>";
+        result += "<th>&times;</th>";
       }
 
       for(var j=minCol; j<=maxCol; j++)
@@ -105,16 +105,16 @@ function generateTable() {
 
   return false;
 }
-function printError(error){
-   var node = document.getElementById("error");
+function printMessage(message){
+   var node = document.getElementById("message");
    var newP = document.createElement("P");
-   clearError();
-   newP.appendChild(error);
+   clearMessage();
+   newP.appendChild(message);
    node.appendChild(newP);
 }
-function clearError(){
-    var errorMessage = document.getElementById("error");
-    while(errorMessage.firstChild){
-        errorMessage.removeChild(errorMessage.firstChild);
+function clearMessage(){
+    var message = document.getElementById("message");
+    while(message.firstChild){
+        message.removeChild(message.firstChild);
     }
 }
