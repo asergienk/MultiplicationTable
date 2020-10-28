@@ -4,19 +4,25 @@ function generateTable() {
   var maxCol = parseInt(document.getElementById("maxCol").value);
   var minRow = parseInt(document.getElementById("minRow").value);
   var maxRow = parseInt(document.getElementById("maxRow").value);
+  var error = document.getElementById("error");
 
   //swapping values if min>max
+  error.textContent = '';
   if(minCol>maxCol)
   {
     let temp = maxCol;
     maxCol = minCol;
     minCol = temp;
+    error.textContent += "Min and Max Column Values are swapped."";
+    error.style.color = "red";
   }
   if(minRow>maxRow)
   {
     let temp = maxRow;
     maxRow = minRow;
     minRow = temp;
+    error.textContent += "Min and Max Row Values are swapped.";
+    error.style.color = "red";
   }
 
   var table = document.getElementById("multTable");
@@ -61,24 +67,6 @@ function generateTable() {
     }
   //printing the table
   table.innerHTML=result;
-
-  return false;
-}
-
-
-function checkValid() {
-  var minCol = document.getElementById("minCol").value;
-  var maxCol = document.getElementById("maxCol").value;
-  var minRow = document.getElementById("minRow").value;
-  var maxRow = document.getElementById("maxRow").value;
-
-  // if minCol, maxCol, minRow, maxRow is Not a Number
-  if (isNaN(minCol) || isNaN(maxCol) || isNaN(minRow) || isNaN(maxRow)) {
-    text = "Input is not valid. Please enter an integer value.";
-  } else {
-      text = "Input is valid.";
-  }
-  document.getElementById("error").innerHTML = text;
 
   return false;
 }

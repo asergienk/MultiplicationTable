@@ -6,44 +6,34 @@ html {
 
 body {
     background-color: #E2E3FF;
-    /*
     margin: 0 auto;
-    max-width: 960px;
-    min-height: 100%;
-    min-width: 700px;
-    padding: 30px;
-    width: 50%;
-*/
+    width: 70%;
+    height: 100%
 }
 
-#wrapper {
-	width: 80%;
-	margin: auto;
-	display: grid;
-	grid-template-columns: 400px 400px;
-  grid-template-rows: 400px;
-  grid-gap: 20px;
-	grid-template-areas: "input table";
-	margin-top: 25px;
-	min-width: 600px;
-  padding-top: 50px;
+h2 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    background-color: #c68de2;
 }
 
-form {
-  grid-column: 1/2;
-  margin: auto;
+p {
+  padding-left: 15px;
+  padding-bottom: 15px;
 }
 
+.containerInput {
+  padding-left: 0px;
+  padding-right: 0px;
+}
 
 #multTable {
-  grid-column: 2/3;
   margin: auto;
-
-   overflow-x:scroll;
-   overflow-y:scroll;
-   width: 600px;
-   height: 300px;
-   display:block;
+  height: 200px;
+  overflow-x:scroll;
+  overflow-y:scroll;
+  display:block;
 }
 
 #multTable td, th {
