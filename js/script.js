@@ -26,6 +26,10 @@ function generateTable() {
     let temp = maxRow;
     maxRow = minRow;
     minRow = temp;
+    var newP = document.createElement("P");
+    var node = document.createTextNode("Min and Max Column Values are swapped.");
+    newP.appendChild(node);
+    error.appendChild(newP);
     //error.textContent += "Min and Max Row Values are swapped.";
     //error.style.color = "red";
   }
@@ -41,7 +45,7 @@ function generateTable() {
         //starting a new row
         result += "<tr>";
         //printing x in the left upper corner of the table
-        result += "<th>&times;</th>";
+        result += "<th>" + " " + "</th>";
       }
 
       for(var j=minCol; j<=maxCol; j++)

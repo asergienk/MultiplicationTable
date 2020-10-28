@@ -6,11 +6,10 @@ html {
 
 body {
     background-color: #E2E3FF;
-    /*
+
     margin: 0 auto;
    width: 70%;
-   height: 100%;
-   */
+
 }
 
 h2 {
@@ -39,7 +38,10 @@ p {
   padding-left: 0px;
   padding-right: 0px;
 }
-
+.container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
 #multTable {
   margin: auto;
   height: 200px;
@@ -50,6 +52,8 @@ p {
 }
 #error p{
   color: red;
+  margin-bottom: 0px;
+  padding-top: 15px;
   padding-left: 15px;
   text-align: center;
 }
