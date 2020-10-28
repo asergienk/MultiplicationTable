@@ -5,24 +5,29 @@ function generateTable() {
   var minRow = parseInt(document.getElementById("minRow").value);
   var maxRow = parseInt(document.getElementById("maxRow").value);
   var error = document.getElementById("error");
+  //if(var node = document.createTextNode();)
 
   //swapping values if min>max
-  error.textContent = '';
+
   if(minCol>maxCol)
   {
     let temp = maxCol;
     maxCol = minCol;
     minCol = temp;
-    error.textContent += "Min and Max Column Values are swapped."";
-    error.style.color = "red";
+    var newP = document.createElement("P");
+    var node = document.createTextNode("Min and Max Column Values are swapped.");
+    newP.appendChild(node);
+    error.appendChild(newP);
+    //error.textContent += "Min and Max Column Values are swapped.";
+    //error.style.color = "red";
   }
   if(minRow>maxRow)
   {
     let temp = maxRow;
     maxRow = minRow;
     minRow = temp;
-    error.textContent += "Min and Max Row Values are swapped.";
-    error.style.color = "red";
+    //error.textContent += "Min and Max Row Values are swapped.";
+    //error.style.color = "red";
   }
 
   var table = document.getElementById("multTable");

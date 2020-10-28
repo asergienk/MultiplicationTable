@@ -6,9 +6,11 @@ html {
 
 body {
     background-color: #E2E3FF;
+    /*
     margin: 0 auto;
-    width: 70%;
-    height: 100%
+   width: 70%;
+   height: 100%;
+   */
 }
 
 h2 {
@@ -17,10 +19,20 @@ h2 {
     text-align: center;
     background-color: #c68de2;
 }
-
+/*
 p {
   padding-left: 15px;
   padding-bottom: 15px;
+}
+*/
+.purple-background {
+  background-color:#c68de2;
+}
+.black {
+  color:#000000;
+}
+.inputfield{
+  height:30px;
 }
 
 .containerInput {
@@ -34,6 +46,12 @@ p {
   overflow-x:scroll;
   overflow-y:scroll;
   display:block;
+  width:70%;
+}
+#error p{
+  color: red;
+  padding-left: 15px;
+  text-align: center;
 }
 
 #multTable td, th {

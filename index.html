@@ -9,43 +9,48 @@
   </head>
   <body>
 
+
 <div class="containerInput">
   <h2>Multiplication Table</h2>
-  <form class="form-horizontal" onsubmit="return generateTable();">
+  <!--<h4>Please enter range value for your Maltiplication Table.</h4>-->
+  <div class="row justify-content-center">
+  <div class="col-lg-6 col-md-6-offset-3 col-sm-12 well" >
+  <form class = 'card p-3 bg-light' class="form-horizontal" action="/action_page.php" onsubmit="return generateTable();">
     <div class="form-group">
       <label class="control-label col-sm-10" for="minCol">Minimum Column Value:</label>
-      <div class="col-sm-8">
-        <input type="number" class="form-control" id="minCol" name="minCol" min="-50" max="50" required>
+      <div class="col-sm-12">
+        <input type="number" class="form-control inputfield" id="minCol" name="minCol" min="-50" max="50" required>
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-10" for="maxCol">Maximum Column Value:</label>
-      <div class="col-sm-8">
-        <input type="number" class="form-control" id="maxCol" name="maxCol" min="-50" max="50" required>
+      <div class="col-sm-12">
+        <input type="number" class="form-control inputfield" id="maxCol" name="maxCol" min="-50" max="50" required>
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-10" for="minRow">Minimum Row Value:</label>
-      <div class="col-sm-8">
-        <input type="number" class="form-control" id="minRow" name="minRow" min="-50" max="50" required>
+      <div class="col-sm-12">
+        <input type="number" class="form-control inputfield" id="minRow" name="minRow" min="-50" max="50" required>
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-10" for="maxRow">Maximum Row Value:</label>
-      <div class="col-sm-8">
-        <input type="number" class="form-control" id="maxRow" name="maxRow" min="-50" max="50" required>
+      <div class="col-sm-12">
+        <input type="number" class="form-control inputfield" id="maxRow" name="maxRow" min="-50" max="50" required>
       </div>
     </div>
     <div class="form-group">
       <div class="col-sm-offset-2 col-sm-10">
-        <button type="submit" class="btn btn-light">Generate</button>
+        <button type="submit" class="btn btn-secondary purple-background black">Generate</button>
       </div>
     </div>
   </form>
 </div>
+</div>
+</div>
 
 <div id="error">
-  <p></p>
 </div>
 
 
