@@ -7,17 +7,37 @@ function generateTable() {
   var error = document.getElementById("error");
   //if(var node = document.createTextNode();)
 
-  //swapping values if min>max
+  clearError();
 
+  //swapping values if min>max
+  if(minCol>maxCol && minRow>maxRow)
+  {
+    let temp = maxCol;
+    maxCol = minCol;
+    minCol = temp;
+
+    let temp2 = maxRow;
+    maxRow = minRow;
+    minRow = temp2;
+
+    var node = document.createTextNode("Min and Max Column AND Row Values are swapped.");
+    printError(node);
+  }
+ else{
   if(minCol>maxCol)
   {
     let temp = maxCol;
     maxCol = minCol;
     minCol = temp;
+    var node = document.createTextNode("Min and Max Column Values are swapped.");
+    printError(node);
+    /*
     var newP = document.createElement("P");
     var node = document.createTextNode("Min and Max Column Values are swapped.");
+    clearError();
     newP.appendChild(node);
     error.appendChild(newP);
+    */
     //error.textContent += "Min and Max Column Values are swapped.";
     //error.style.color = "red";
   }
@@ -26,13 +46,20 @@ function generateTable() {
     let temp = maxRow;
     maxRow = minRow;
     minRow = temp;
+    var node = document.createTextNode("Min and Max Row Values are swapped.");
+    printError(node);
+
+    /*
+    clearError();
     var newP = document.createElement("P");
-    var node = document.createTextNode("Min and Max Column Values are swapped.");
+    var node = document.createTextNode("Min and Max Row Values are swapped.");
     newP.appendChild(node);
     error.appendChild(newP);
+    */
     //error.textContent += "Min and Max Row Values are swapped.";
     //error.style.color = "red";
   }
+}
 
   var table = document.getElementById("multTable");
   var result = "";
@@ -44,7 +71,6 @@ function generateTable() {
       {
         //starting a new row
         result += "<tr>";
-        //printing x in the left upper corner of the table
         result += "<th>" + " " + "</th>";
       }
 
@@ -78,4 +104,17 @@ function generateTable() {
   table.innerHTML=result;
 
   return false;
+}
+function printError(error){
+   var node = document.getElementById("error");
+   var newP = document.createElement("P");
+   clearError();
+   newP.appendChild(error);
+   node.appendChild(newP);
+}
+function clearError(){
+    var errorMessage = document.getElementById("error");
+    while(errorMessage.firstChild){
+        errorMessage.removeChild(errorMessage.firstChild);
+    }
 }
