@@ -1,3 +1,12 @@
+<!--
+ Link to this assignment: https://asergienk.github.io/MultiplicationTable/
+ GitHub repository link: https://github.com/asergienk/MultiplicationTable
+ 91.61 Assignment: Multiplication Table with JavaScript
+ Anna Sergienko, UMass Lowell Computer Science, anna_sergienko@student.uml.edu
+ Copyright (c) 2020 by Anna Sergienko. All rights reserved. May be
+ freely copied or excerpted for educational purposes with credit to the author.
+ updated by AS on October 28, 2020 at 9:30 PM
+-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,53 +18,55 @@
   </head>
   <body>
 
-
+<!-- Input form: 4 input fields. -->
 <div class="containerInput">
   <h2>Multiplication Table</h2>
-
+  <!-- Centering the form. -->
   <div class="row justify-content-center">
-  <div class="col-lg-6 col-md-6-offset-3 col-sm-12 well" >
-  <form class = 'card p-3 bg-light' class="form-horizontal" action="/action_page.php" onsubmit="return generateTable();">
-    <h6>Please enter range values for your Multiplication Table.</h6>
-    <hr>
-    <div class="form-group">
-      <label class="control-label col-sm-10" for="minCol">Minimum Column Value:</label>
-      <div class="col-sm-12">
-        <input type="number" class="form-control inputfield" id="minCol" name="minCol" min="-50" max="50" required>
+    <!-- Displaying the form differently on different screen sizes. -->
+    <div class="col-lg-6 col-md-6-offset-3 col-sm-12 well" >
+    <form class = 'card p-3 bg-light' class="form-horizontal" action="/action_page.php" onsubmit="return generateTable();">
+      <h6>Please enter range values for your Multiplication Table.</h6>
+      <hr>
+      <div class="form-group">
+        <label class="control-label col-sm-10" for="minCol">Minimum Column Value:</label>
+        <div class="col-sm-12">
+          <input type="number" class="form-control inputfield" id="minCol" name="minCol" min="-50" max="50" required>
+        </div>
       </div>
-    </div>
-    <div class="form-group">
-      <label class="control-label col-sm-10" for="maxCol">Maximum Column Value:</label>
-      <div class="col-sm-12">
-        <input type="number" class="form-control inputfield" id="maxCol" name="maxCol" min="-50" max="50" required>
+      <div class="form-group">
+        <label class="control-label col-sm-10" for="maxCol">Maximum Column Value:</label>
+        <div class="col-sm-12">
+          <input type="number" class="form-control inputfield" id="maxCol" name="maxCol" min="-50" max="50" required>
+        </div>
       </div>
-    </div>
-    <div class="form-group">
-      <label class="control-label col-sm-10" for="minRow">Minimum Row Value:</label>
-      <div class="col-sm-12">
-        <input type="number" class="form-control inputfield" id="minRow" name="minRow" min="-50" max="50" required>
+      <div class="form-group">
+        <label class="control-label col-sm-10" for="minRow">Minimum Row Value:</label>
+        <div class="col-sm-12">
+          <input type="number" class="form-control inputfield" id="minRow" name="minRow" min="-50" max="50" required>
+        </div>
       </div>
-    </div>
-    <div class="form-group">
-      <label class="control-label col-sm-10" for="maxRow">Maximum Row Value:</label>
-      <div class="col-sm-12">
-        <input type="number" class="form-control inputfield" id="maxRow" name="maxRow" min="-50" max="50" required>
+      <div class="form-group">
+        <label class="control-label col-sm-10" for="maxRow">Maximum Row Value:</label>
+        <div class="col-sm-12">
+          <input type="number" class="form-control inputfield" id="maxRow" name="maxRow" min="-50" max="50" required>
+        </div>
       </div>
-    </div>
-    <div class="form-group">
-      <div class="col-sm-offset-2 col-sm-10">
-        <button type="submit" class="btn btn-secondary purple-background black">Generate</button>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="submit" class="btn btn-secondary purple-background black">Generate</button>
+        </div>
       </div>
-    </div>
-  </form>
-</div>
-</div>
+    </form>
+  </div>
+ </div>
 </div>
 
+<!-- To print message to the user. -->
 <div id="message">
 </div>
 
-
+<!-- Multiplication table. -->
 <div class="container">
   <table id="multTable"></table>
 </div>

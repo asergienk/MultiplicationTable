@@ -1,3 +1,4 @@
+//Function to generate a multiplication table based on user's range input.
 function generateTable() {
   //getting input values
   var minCol = parseInt(document.getElementById("minCol").value);
@@ -5,7 +6,6 @@ function generateTable() {
   var minRow = parseInt(document.getElementById("minRow").value);
   var maxRow = parseInt(document.getElementById("maxRow").value);
   var error = document.getElementById("message");
-  //if(var node = document.createTextNode();)
 
   clearMessage();
 
@@ -31,15 +31,6 @@ function generateTable() {
     minCol = temp;
     var node = document.createTextNode("Min and Max Column Values are swapped.");
     printMessage(node);
-    /*
-    var newP = document.createElement("P");
-    var node = document.createTextNode("Min and Max Column Values are swapped.");
-    clearMessage();
-    newP.appendChild(node);
-    error.appendChild(newP);
-    */
-    //error.textContent += "Min and Max Column Values are swapped.";
-    //error.style.color = "red";
   }
   if(minRow>maxRow)
   {
@@ -48,16 +39,6 @@ function generateTable() {
     minRow = temp;
     var node = document.createTextNode("Min and Max Row Values are swapped.");
     printMessage(node);
-
-    /*
-    clearMessage();
-    var newP = document.createElement("P");
-    var node = document.createTextNode("Min and Max Row Values are swapped.");
-    newP.appendChild(node);
-    error.appendChild(newP);
-    */
-    //error.textContent += "Min and Max Row Values are swapped.";
-    //error.style.color = "red";
   }
 }
 
@@ -105,6 +86,7 @@ function generateTable() {
 
   return false;
 }
+//Function to print a message if min and max values were swapped.
 function printMessage(message){
    var node = document.getElementById("message");
    var newP = document.createElement("P");
@@ -112,6 +94,7 @@ function printMessage(message){
    newP.appendChild(message);
    node.appendChild(newP);
 }
+//Function to clear a message.
 function clearMessage(){
     var message = document.getElementById("message");
     while(message.firstChild){
